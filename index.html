@@ -25,6 +25,19 @@
         h1, h2 {
             margin-bottom: 20px;
         }
+
+        /* Style for the RSVP tab */
+        #rsvp-tab {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #2980b9; /* Blue button color */
+            text-align: center;
+        }
+
+        /* Hide the RSVP section by default */
+        #rsvp-section {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -46,12 +59,30 @@
         <!-- Add more details as needed -->
     </section>
 
-    <section id="rsvp">
+    <!-- Newport Image Section -->
+    <section id="newport-image">
+        <h2>Explore Newport</h2>
+        <img src="https://www.newportexperience.com/wp-content/uploads/2022/03/oceancliff-west-1536x1024.jpg" alt="Newport Image"
+    </section>
+
+    <!-- RSVP Tab -->
+    <div id="rsvp-tab" onclick="showRSVP()">RSVP</div>
+
+    <!-- RSVP Section -->
+    <section id="rsvp-section">
         <h2>RSVP</h2>
-        <p>We would love for you to join us on our special day. Please RSVP by [date].</p>
         <!-- Add an RSVP form or details -->
     </section>
 
+    <!-- JavaScript to toggle RSVP section visibility -->
+    <script>
+        function showRSVP() {
+            var rsvpSection = document.getElementById("rsvp-section");
+            rsvpSection.style.display = (rsvpSection.style.display === "none") ? "block" : "none";
+        }
+    </script>
+
 </body>
 </html>
+
 
