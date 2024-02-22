@@ -63,10 +63,9 @@
     <section id="newport-image">
         <h2>Explore Newport</h2>
         <img src="https://www.newportexperience.com/wp-content/uploads/2022/03/oceancliff-west-1536x1024.jpg" alt="Newport Image"
-    </section>
 
     <!-- RSVP Tab -->
-    <div id="rsvp-tab" onclick="showRSVP()">RSVP</div>
+    <div id="rsvp-tab" onclick="toggleRSVP()">RSVP</div>
 
     <!-- RSVP Section -->
     <section id="rsvp-section">
@@ -76,7 +75,7 @@
 
     <!-- JavaScript to toggle RSVP section visibility -->
     <script>
-        function showRSVP() {
+        function toggleRSVP() {
             var rsvpSection = document.getElementById("rsvp-section");
             rsvpSection.style.display = (rsvpSection.style.display === "none") ? "block" : "none";
         }
