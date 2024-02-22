@@ -38,6 +38,31 @@
         #rsvp-section {
             display: none;
         }
+
+        /* Style for the RSVP form */
+        #rsvp-form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        /* Style for form fields */
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: #2980b9; /* Blue button color */
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -70,18 +95,36 @@
     <!-- RSVP Section -->
     <section id="rsvp-section">
         <h2>RSVP</h2>
-        <!-- Add an RSVP form or details -->
+        <!-- RSVP Form -->
+        <form id="rsvp-form">
+            <label for="guestName">Your Name:</label>
+            <input type="text" id="guestName" name="guestName" required>
+
+            <label for="attendanceStatus">Will you attend?</label>
+            <select id="attendanceStatus" name="attendanceStatus" required>
+                <option value="yes">Yes, I will be there!</option>
+                <option value="no">Sorry, I can't make it.</option>
+            </select>
+
+            <button type="button" onclick="submitRSVP()">Submit RSVP</button>
+        </form>
     </section>
 
-    <!-- JavaScript to toggle RSVP section visibility -->
+    <!-- JavaScript to toggle RSVP section visibility and handle form submission -->
     <script>
         function toggleRSVP() {
             var rsvpSection = document.getElementById("rsvp-section");
             rsvpSection.style.display = (rsvpSection.style.display === "none") ? "block" : "none";
         }
+
+        function submitRSVP() {
+            // Add your logic to handle the form submission (e.g., send data to a server)
+            alert("Thank you for your RSVP!");
+        }
     </script>
 
 </body>
 </html>
+
 
 
